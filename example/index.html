@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>queryDeclarationAll() Example</title>
+  <link rel="stylesheet" type="text/css" href="example.css">
+</head>
+<body>
+
+<div class="col">
+  <span>Query for elements via  CSS declarartions</span>
+  <input id="ex1" type="text" value="queryDeclarationAll({ &quot;color&quot;: &quot;rgb(192, 57, 43)&quot; })" >
+  <button data-target="ex1">Run</button>
+
+  <span>Multiple CSS declarartions</span>
+  <input id="ex2" type="text" value="queryDeclarationAll({ &quot;font-weight&quot;: &quot;bold&quot;, &quot;color&quot;: &quot;#c0392b&quot; }, &quot;.title&quot;)" >
+  <button data-target="ex2">Run</button>
+
+  <span>Equivalent value coercion (ie HEX to RGB)</span>
+  <input id="ex3" type="text" value="queryDeclarationAll({ &quot;background-color&quot;: &quot;#7f8c8d&quot; })" >
+  <button data-target="ex3">Run</button>
+
+  <span>Filter elements with a CSS selector parameter</span>
+  <input id="ex4" type="text" value="queryDeclarationAll({ &quot;background-color&quot;: &quot;#7f8c8d&quot; }, &quot;li&quot;)" >
+  <button data-target="ex4">Run</button>
+
+  <span>Prefix values with comparision operators</span>
+  <input id="ex5" type="text" value="queryDeclarationAll({ &quot;font-size&quot;: &quot;>20px&quot; })" >
+  <button data-target="ex5">Run</button>
+
+  <input id="ex6" type="text" name="" value="queryDeclarationAll({ &quot;width&quot;: &quot;<150px&quot; }, &quot;img&quot;)" >
+  <button data-target="ex6">Run</button>
+
+  <input id="ex7" type="text" value="queryDeclarationAll({ &quot;opacity&quot;: &quot;<0.75&quot; }, &quot;img&quot;)" >
+  <button data-target="ex7">Run</button>
+</div>
+<div class="col demo">
+  <p class="title">Heading</p>
+  <p class="tag-line">Tag line</p>
+  <div class="cf" style="width: 315px;">
+    <img src="https://octodex.github.com/images/original.png">
+    <img src="https://octodex.github.com/images/original.png" class="sm" style="background-color: #27ae60;">
+    <img src="https://octodex.github.com/images/original.png" class="sm" style="background-color: #e74c3c; opacity: 0.7;">
+  </div>
+
+  <ul>
+    <li>Lage text</li>
+    <li>List Item</li>
+    <li>Colored text</li>
+    <li>Background-color</li>
+  </ul>
+</div>
+
+<script src="../dist/query-declaration.js"></script>
+<script src="example.js"></script>
+</body>
+</html>
