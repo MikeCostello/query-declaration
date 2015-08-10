@@ -5,7 +5,7 @@ module.exports = {
     entry: "./lib/jquery-selector-style.js",
     output: {
         path: path.join(__dirname, "dist"),
-        filename: "jquery-selector-style.js",
+        filename: "jquery-selector-style.min.js",
     },
     external: {
         "jquery": "jQuery"
