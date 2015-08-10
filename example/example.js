@@ -1,13 +1,11 @@
 function select(elems) {
-  if (Array.isArray(elems)) {
-    // Toggle off 'selected' class
-    [].forEach.call(document.querySelectorAll('.selected'), function(elem) {
-      elem.classList.remove('selected');
-    });
+  if (Array.isArray(elems) || elems.jquery) {
+    if (!elems.jquery) {
+      elems = $(elems);
+    }
 
-    elems.forEach(function(elem) {
-      elem.classList.add('selected');
-    });
+    $('.selected').removeClass('selected');
+    elems.addClass('selected');
   }
 }
 

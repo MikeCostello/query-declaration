@@ -33,6 +33,10 @@
 
   <input id="ex7" type="text" value="queryDeclarationAll({ &quot;opacity&quot;: &quot;<0.75&quot; }, &quot;img&quot;)" >
   <button data-target="ex7">Run</button>
+
+  <span>Use as a custom <strong>jQuery</strong> <span class="code">:style()</span> selector plugin</span>
+  <input id="ex8" type="text" value="$(&quot;img:style({ background-color: #27AE60 })&quot;)" >
+  <button data-target="ex8">Run</button>
 </div>
 <div class="col demo">
   <p class="title">Heading</p>
@@ -51,7 +55,9 @@
   </ul>
 </div>
 
+<script src="./jquery.min.js"></script>
 <script src="../dist/query-declaration.js"></script>
+<script src="../dist/jquery-selector-style.js"></script>
 <script src="example.js"></script>
 </body>
 </html>
