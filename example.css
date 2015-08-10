@@ -40,6 +40,13 @@ span {
   margin: 20px 0 5px 5px;
 }
 
+span.code {
+  display: inline-block;
+  font-family: monospace;
+  background-color: #bdc3c7;
+  padding: 3px;
+}
+
 input[type="text"] {
   width: 400px;
   font-family: monospace;
