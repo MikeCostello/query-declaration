@@ -6,7 +6,7 @@ A pure-javascript CSS selector engine using CSS declarations for querying. Allow
 
 ## Install Options
 * Download [query-declaration](https://raw.githubusercontent.com/MikeCostello/query-declaration/master/dist/query-declaration.min.js) for use in `<script>` tag.
-* `npm install query-declaration`
+* `npm install query-declaration` for use with AMD or CommonJS.
 
 ## Build
 ```
