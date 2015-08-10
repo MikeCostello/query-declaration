@@ -1,0 +1,36 @@
+{
+  "name": "queryDeclaration",
+  "version": "1.0.2",
+  "homepage": "https://github.com/MikeCostello/query-declaration",
+  "authors": [
+    "Mike Costello <michael.a.costello@gmail.com>"
+  ],
+  "description": "A pure-javascript CSS selector engine using CSS declarations for querying.",
+  "main": [
+    "./dist/query-declaration.min.js",
+    "./dist/jquery-selector-style.min.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "selector",
+    "dom",
+    "style",
+    "queryselectorall",
+    "getComputedStyle",
+    "jquery",
+    "plugin"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
