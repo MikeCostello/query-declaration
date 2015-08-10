@@ -12,6 +12,6 @@ A pure-javascript CSS selector engine using CSS declarations for querying. Allow
 ```
 git clone git@github.com:MikeCostello/query-declaration.git
 npm install
-npm install -g web-pack
+npm install -g webpack
 npm run build
 ```
