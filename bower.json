@@ -1,6 +1,6 @@
 {
   "name": "query-declaration",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/MikeCostello/query-declaration",
   "authors": [
     "Mike Costello <michael.a.costello@gmail.com>"
@@ -23,7 +23,8 @@
     "queryselectorall",
     "getComputedStyle",
     "jquery",
-    "plugin"
+    "plugin",
+    "scraper"
   ],
   "license": "ISC",
   "ignore": [
