@@ -22,20 +22,20 @@ npm run build
 
 `queryDeclarationAll(css [,context])`
 
-**css**
-A CSS declaration block to match DOM Elements' computed styles against.
+**css**  
+A CSS declaration block to match DOM Elements' computed styles against.  
 *Type:* String or PlainObject
 
-**context**
-The DOM Elements used when validating the CSS rules.
-*Type*: CSS Selector String, DOM Element or Array of DOM Elements.
+**context**  
+The DOM Elements used when validating the CSS rules.  
+*Type*: CSS Selector String, DOM Element or Array of DOM Elements.  
 *Default:* `"*"`
 
 ####jQuery Selector
 `$(":style(css)")`
 
-**css**
-A CSS declaration block to match jQuery Elements' styles against.
+**css**  
+A CSS declaration block to match jQuery Elements' styles against.  
 *Type:* String or PlainObject
 
 
