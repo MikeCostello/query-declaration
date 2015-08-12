@@ -31,7 +31,7 @@ The DOM Elements used when validating the CSS rules.
 *Type*: CSS Selector String, DOM Element or Array of DOM Elements.  
 *Default:* `"*"`
 
-####jQuery Selector
+####jQuery Selector  
 `$(":style(css)")`
 
 **css**  
@@ -39,8 +39,7 @@ A CSS declaration block to match jQuery Elements' styles against.
 *Type:* String or PlainObject
 
 
-###Examples
-
+###Examples  
 ```
 // Select red paragraphs
 queryDeclarationAll({ color: "red" }, "p")
