@@ -7,6 +7,10 @@
   "scripts": {
     "build": "webpack && webpack --config webpack.config.min.js && webpack --config webpack.config.jquery.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/MikeCostello/query-declaration.git"
+  },
   "author": "Mike Costello",
   "license": "ISC",
   "devDependencies": {
