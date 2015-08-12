@@ -2,12 +2,13 @@
 
 A pure-javascript CSS selector engine using CSS declarations for querying. Allowing the selection of elements by how they're styled.
 
-## [Demo](http://mikecostello.github.io/query-declaration)
+[Demo](http://mikecostello.github.io/query-declaration)
 
 ## Install Options
 * Download [query-declaration.js](https://raw.githubusercontent.com/MikeCostello/query-declaration/master/dist/query-declaration.min.js) for use in `<script>` tag.
 * jQuery plugin [jquery-selector-style.js](https://raw.githubusercontent.com/MikeCostello/query-declaration/master/dist/jquery-selector-style.min.js)
-* `npm install query-declaration` for use with AMD or CommonJS.
+* `npm install query-declaration`
+* `bower install query-declaration`
 
 ## Build
 ```
@@ -21,25 +22,21 @@ npm run build
 
 `queryDeclarationAll(css [,context])`
 
-**css** A CSS declaration block to match DOM Elements' computed styles against.
+**css**
+A CSS declaration block to match DOM Elements' computed styles against.
+*Type:* String or PlainObject
 
-Type: String or PlainObject
+**context**
+The DOM Elements used when validating the CSS rules.
+*Type*: CSS Selector String, DOM Element or Array of DOM Elements.
+*Default:* `"*"`
 
-
-
-**context** The DOM Elements used when validating the CSS rules.
-
-Type: CSS Selector String, DOM Element or Array of DOM Elements.
-
-Default: "*"
-
-
-*jQuery Selector*
+####jQuery Selector
 `$(":style(css)")`
 
-**css** A CSS declaration block to match jQuery Elements' styles against.
-
-Type: String or PlainObject
+**css**
+A CSS declaration block to match jQuery Elements' styles against.
+*Type:* String or PlainObject
 
 
 ###Examples
