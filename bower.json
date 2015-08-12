@@ -5,7 +5,7 @@
   "authors": [
     "Mike Costello <michael.a.costello@gmail.com>"
   ],
-  "description": "A pure-javascript CSS selector engine using CSS declarations for querying.",
+  "description": "A pure-javascript and jQuery plugin CSS selector engine using CSS declarations for querying.",
   "main": [
     "./dist/query-declaration.min.js",
     "./dist/jquery-selector-style.min.js"
