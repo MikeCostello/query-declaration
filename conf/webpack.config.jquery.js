@@ -1,22 +1,22 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
-    entry: "./lib/jquery-selector-style.js",
+    entry: './lib/jquery-selector-style.js',
     output: {
-        path: "./dist",
-        filename: "jquery-selector-style.min.js",
+        path: './dist',
+        filename: 'jquery-selector-style.min.js',
     },
     external: {
-        "jquery": "jQuery"
+        jquery: 'jQuery'
     },
     module: {
         loaders: [
             {
               test: /\.js$/,
               exclude: /(node_modules|bower_components)/,
-              loader: "babel",
+              loader: 'babel',
               query: {
-                loose: "all"
+                loose: 'all'
               }
             }
         ]
