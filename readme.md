@@ -18,6 +18,11 @@ npm install -g webpack
 npm run build
 ```
 
+#### Optional
+```
+npm run docs
+```
+
 ## Documentation
 
 `queryDeclarationAll(css [,context])`

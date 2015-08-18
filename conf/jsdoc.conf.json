@@ -1,0 +1,10 @@
+{
+  "source": {
+    "include": "./lib/query-declaration.js"
+  },
+  "opts": {
+    "destination": "./docs",
+    "readme": "./readme.md",
+    "private": true
+  }
+}
