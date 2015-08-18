@@ -1,12 +1,13 @@
-var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
-    entry: "./lib/query-declaration.js",
+    entry: "./lib/jquery-selector-style.js",
     output: {
-        path: path.join(__dirname, "dist"),
-        filename: "query-declaration.js",
-        library: "queryDeclarationAll",
-        libraryTarget: "umd"
+        path: "./dist",
+        filename: "jquery-selector-style.min.js",
+    },
+    external: {
+        "jquery": "jQuery"
     },
     module: {
         loaders: [
@@ -20,5 +21,5 @@ module.exports = {
             }
         ]
     },
-    plugins: []
+    plugins: [new webpack.optimize.UglifyJsPlugin({})]
 };

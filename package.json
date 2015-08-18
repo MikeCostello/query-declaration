@@ -5,7 +5,7 @@
   "keywords": "css selector dom style queryselectorall getComputedStyle jquery plugin scraper",
   "main": "./dist/query-declaration.min.js",
   "scripts": {
-    "build": "webpack && webpack --config webpack.config.min.js && webpack --config webpack.config.jquery.js"
+    "build": "webpack --config conf/webpack.config.js && webpack --config conf/webpack.config.min.js && webpack --config conf/webpack.config.jquery.js"
   },
   "repository": {
     "type": "git",
