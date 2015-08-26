@@ -1,6 +1,6 @@
 {
   "name": "query-declaration",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A pure-javascript CSS selector engine using CSS declarations for querying.",
   "keywords": "css selector dom style queryselectorall getComputedStyle jquery plugin scraper",
   "main": "./dist/query-declaration.min.js",

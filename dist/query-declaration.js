@@ -54,6 +54,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Query Declaration
+	 * @module queryDeclaration
+	 * @type {Array}
+	 */
+
 	'use strict';
 
 	exports.__esModule = true;
@@ -67,6 +73,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	var resolvableProperties = ['color', 'background-color'];
 	var reFloat = /-?\d*\.?\d+/g;
 
+	/**
+	 * Query for HTML Elements that match a CSS declaration
+	 * @example
+	 * queryDeclarationAll({"color": "red"}, "h1")
+	 * queryDeclarationAll("{color: blue}", "h2")
+	 * @param {(Object|String)} css - CSS declaration
+	 * @param {(String|HTMLElement|HTMLElement[])} [selectors] - Elements to match CSS declaration against
+	 * @returns {HTMLElement[]} Return an array of matched HTML Elements
+	 */
 	function queryDeclarationAll(css) {
 	  var selectors = arguments.length <= 1 || arguments[1] === undefined ? '*' : arguments[1];
 
@@ -105,7 +120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      value = resolvableProperties.includes(property) ? normalizeCssValue(property, value) : value;
 
-	      return compare(elemComputedStyle.getPropertyValue(property), value, operator);;
+	      return compare(elemComputedStyle.getPropertyValue(property), value, operator);
 	    });
 
 	    return isMatch;
@@ -114,6 +129,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return elems;
 	}
 
+	/**
+	 * @private
+	 * @example
+	 * parseCssBlock("{ color: red; width: 100px }")
+	 * // Returns Object { color: "red", width: "100px" }
+	 * @param {String} css - CSS declaration
+	 * @returns {Object} Returns CSS declaration as an Object
+	 */
 	function parseCssBlock(css) {
 	  css = css.replace(/{|}/g, '').split(';').reduce(function (css, declaration) {
 	    var _declaration$split$map = declaration.split(':').map(function (str) {
@@ -131,17 +154,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return css;
 	}
 
+	/**
+	 * Separates CSS value from comparison operator
+	 * @private
+	 * @param {String} value - String prefixed with comparison operator (>, <, !, =, ==, ===, !=, <=, >=)
+	 * @returns {Array} An array with value and operator
+	 */
 	function parseCssValue(value) {
 	  var operatorMatch = value.match(/^[><!=]={0,2}/);
 	  var operator = Array.isArray(operatorMatch) ? operatorMatch[0] : undefined;
 
 	  if (operator) {
 	    value = value.substr(operator.length);
+
+	    // Convert assignment to comparison
+	    if (operator === '=') {
+	      operator = '===';
+	    }
 	  }
 
 	  return [value, operator];
 	}
 
+	/**
+	 * @private
+	 * @param {String} a - First value
+	 * @param {String} b - Second value
+	 * @param {String} [operator] - Comparison operator
+	 * @returns {Boolean} True if both values pass the comparison test
+	 */
 	function compare(a, b) {
 	  var operator = arguments.length <= 2 || arguments[2] === undefined ? '===' : arguments[2];
 
@@ -155,10 +196,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    b = _map[1];
 	  }
 
-	  // return Boolean
+	  // evaluate comparison
 	  return eval('a' + operator + 'b');
 	}
 
+	/**
+	 * Normalize CSS property values via a temporary HTML Element
+	 * @private
+	 * @example
+	 * normalizeCssValue("color", "red")
+	 * // Returns "rgb(255, 0, 0)"
+	 * @param {String} property - CSS property
+	 * @param {String} value - CSS value
+	 * @returns {String} Normalized CSS value
+	 */
 	function normalizeCssValue(property, value) {
 	  var _Object$assign;
 
@@ -179,6 +230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return nValue;
 	}
 
+	/** Query for HTML Elements that match a CSS declaration */
 	exports['default'] = queryDeclarationAll;
 	module.exports = exports['default'];
 
